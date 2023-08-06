@@ -10,7 +10,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Todo Project",
+      title: "Mobile Dropdown Menu",
+      template: "./src/index.html",
     }),
   ],
   output: {
