@@ -1,3 +1,123 @@
-.hello {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: royalblue;
+}
+
+#content {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+#mobileDropDownMenuContainer {
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.plusButton {
+
+  cursor: pointer;
+  border: none;
+  border: 5px;
+  height: 50px;
+  width: 50px;
+
+  border-radius: 50%;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px, rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  ;
+  background-color: rgb(55, 196, 55);
+
+  transition: transform 300ms cubic-bezier(0, 0.47, 0.32, 1.97);
+
+  position: relative;
+}
+
+
+.menuOptions {
+  position: absolute;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 0.3rem;
+  height: 60px;
+  width: 400px;
+  background-color: green;
+
+  border-radius: 56px;
+  visibility: hidden;
+
+  animation: closeDraw 1s ease-in-out 0s 1 normal;
+}
+
+
+.show {
+  visibility: visible;
+  opacity: 1;
+
+
+  animation: openDraw 1s ease-in-out 0s 1 normal;
+
+}
+
+
+@keyframes openDraw {
+  0% {
+    width: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    width: 400px;
+    opacity: 1;
+  }
+}
+
+@keyframes closeDraw {
+  0% {
+    width: 400px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    width: 0px;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.menuOptions a {
+  text-decoration: none;
+  color: white;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
